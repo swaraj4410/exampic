@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Image Processor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="page-content">
+    <div class="container">
+        <h1>Exam Image Processor</h1>
+        <p class="subtitle">Prepare your photos and signatures accurately for various competitive exams. Follow the steps below.</p>
+
+        <div class="step-section">
+            <label for="imageUpload">1. Upload Image (JPG/JPEG/PNG)</label>
+            <input type="file" id="imageUpload" accept="image/jpeg, image/jpg, image/png">
+            <div class="preview-area">
+                <img id="originalPreview" src="#" alt="Original Preview" class="hidden">
+                <span id="originalInfo">Upload an image to see preview</span>
+            </div>
+        </div>
+
+        <div class="step-section">
+            <label for="examNameSelect">2. Select Examination</label>
+            <select id="examNameSelect">
+                <option value="" disabled selected>-- Choose Exam --</option>
+                </select>
+        </div>
+
+        <div class="step-section hidden" id="imageTypeSection">
+            <label for="imageTypeSelect">3. Select Image Type</label>
+            <select id="imageTypeSelect" disabled>
+                <option value="" disabled selected>-- Select Type --</option>
+                </select>
+             <div id="specInfo" class="spec-info hidden"></div>
+        </div>
+
+        <button id="processButton" disabled>Process Image</button>
+
+        <div class="result-section hidden" id="resultSection">
+            <h2>Processed Image</h2>
+            <div class="preview-area">
+                 <img id="processedPreview" src="#" alt="Processed Preview">
+                 <span id="processedInfo"></span>
+            </div>
+            <a id="downloadLink" href="#" download="processed_image.jpg" class="download-button hidden">Download Processed Image</a>
+             <p id="processingStatus" class="status hidden"></p>
+        </div>
+         <p id="errorMessage" class="error hidden"></p>
+
+    </div>
+    </main>
+
+    <footer>
+        <p>Disclaimer: Always double-check requirements with the official examination notification. This tool provides assistance but does not guarantee acceptance.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
